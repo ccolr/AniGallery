@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AniGallery</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/obsb/library@main/cursor/mouse.css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- jQuery (Bootstrap的插件必须有的) -->
+    <script src="js/jquery.min.js"></script>
+    <!--主题格式-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Portfolic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <!-- slide -->
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        // 也能使用 "$(window).load(function() {"
+    // 轮播图实现函数
+    $(function () {
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+         auto: true, // 自动播放
+         nav: true, // 显示导航
+         speed: 500, // 轮播速度
+         namespace: "callbacks", // 命名空间
+         // pager: true, // 显示分页
+      });
+    });
+  </script>
+</head>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="top-nav">
+                    <span class="menu"> </span>
+                    <ul>
+                        <li class="active"><a href="index.html">Home </a> </li>
+                        <li><a href="blog.html" data-hover="Blog"> Blog</a></li>
+                        <li><a href="about.html" data-hover="About"> About </a></li>
+                    </ul>
+                    <!--script-->
+                    <script>
+                        $("span.menu").click(function(){
+                        $(".top-nav ul").slideToggle(500, function(){
+                        });
+                    });
+            </script>
+                </div>
+                <div class="header-top-on">
+                    <ul class="social-in">
+                        <li><a href="https://t.me/chromoe" target="_blank"><i class="tin"> </i></a></li>
+                        <li><a href="mailto:angelmoe@outlook.fr" target="_blank"><i class="gmail"> </i></a></li>
+                        <li><a href="https://blog.cco.moe" target="_blank"><i class="browser"> </i></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!---->
+        <div class="container">
+            <div class="header-bottom">
+                <div class="logo">
+                    <a href="index.html"><img src="images/AniGallery.png" alt=""></a>
+                </div>
+                <div class="search">
+                    <form>
+                        <input type="text" value="Search the site..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="container">
+        <div class="banner-top">
+            <div class="slider">
+                <ul class="rslides" id="slider1">
+                    <li><img src="images/ban1.png" alt="">
+                    </li>
+                    <li><img src="images/ban2.png" alt="">
+                    </li>
+                    <li><img src="images/ban3.png" alt="">
+                    </li>
+                    <li><img src="images/ban4.png" alt="">
+                    </li>
+                    <li><img src="images/ban5.png" alt="">
+                    </li>
+                    <li><img src="images/ban6.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--content-->
+    <div class="content">
+        <div class="container">
+            <div class="port">
+                <h2>“ Welcome to the <span>Animation Gallery</span> ”</h2>
+                <h2>“ 这是宫崎骏爷爷为我们打造的童话世界，也是我们的美好回忆 ”</h2>
+                <ul id="filters">
+                    <li><span class="filter " data-filter="qian tian cheng feng">All</span><label class="arrow"> </label></li>
+                    <li><span class="filter" data-filter="qian"> 千と千尋の神隠し </span><label class="arrow arrow1"> </label></li>
+                    <li><span class="filter" data-filter="tian"> 天空の城ラピュタ </span><label class="arrow arrow2 "> </label></li>
+                    <li><span class="filter" data-filter="cheng"> ハウルの動く城 </span><label class="arrow arrow3"> </label></li>
+                    <li><span class="filter" data-filter="feng"> 風立ちぬ </span><label class="arrow arrow4"> </label></li>
+                    <div class="clearfix"> </div>
+                </ul>
+            </div>
+            <div id="portfoliolist">
+                <div class="portfolio qian mix_all" data-cat="qian" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper ">
+                        <a href="plot_qian.html">
+                            <img class="img-responsive" src="images/p1.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>千与千寻剧情介绍</h5>
+                            <p>千寻意外来到神灵世界后，为了救因惩罚而变成猪的家人，经历许多磨难的故事。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio qian mix_all" data-cat="qian" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <a href="video_qian.html">
+                            <img class="img-responsive" src="images/p2.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>千与千寻视频欣赏</h5>
+                            <p>我始终相信，在这个世界上，一定有另一个自己，在做着我不敢做的事，在过着我想过的生活。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio tian mix_all" data-cat="tian" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <a href="plot_tian.html">
+                            <img class="img-responsive" src="images/p3.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>天空之城剧情介绍</h5>
+                            <p>一位技工学徒的少年和一位持有神秘矿石的少女相遇，又与政府军队、特务和海盗争相寻找传说中的天空之城“拉普达”。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio tian mix_all" data-cat="tian" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper ">
+                        <a href="video_tian.html">
+                            <img class="img-responsive" src="images/p4.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>天空之城视频欣赏</h5>
+                            <p>从天空降临的少女，轻轻的飘荡在他的身前。如此的安静着，带着来自远方的梦。梦的此刻在此时起航。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio cheng mix_all" data-cat="cheng" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper ">
+                        <a href="plot_cheng.html">
+                            <img class="img-responsive" src="images/p5.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>哈尔的移动城堡剧情介绍</h5>
+                            <p>少女苏菲因受荒野女巫诅咒，机缘巧合之下进入了哈尔的移动城堡，朝夕相处中苏菲渐渐走进哈尔不为人知的内心世界。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio cheng mix_all" data-cat="cheng" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <a href="video_cheng.html">
+                            <img class="img-responsive" src="images/p6.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>哈尔的移动城堡视频欣赏</h5>
+                            <p>谢谢你让我知道了人生的第一次被爱。世界这么大，人生这么长。总会有这么一个人，让你想要温柔的对待。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio feng mix_all" data-cat="feng" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <a href="plot_feng.html">
+                            <img class="img-responsive" src="images/p7.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>起风了剧情介绍</h5>
+                            <p>男主人公陪伴未婚妻节子在山中疗养，二人共同在疾病中寻觅生的幸福而又不得不面对死亡，也描绘了二人对现实的无奈。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio feng mix_all" data-cat="feng" style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper">
+                        <a href="video_feng.html">
+                            <img class="img-responsive" src="images/p8.png" alt="" />
+                        </a>
+                        <div class="gir">
+                            <h5>起风了视频欣赏</h5>
+                            <p>谁看见过风？我和你，都不曾看见过，但是当树叶颤动之时，就代表风正吹拂而过，风啊，请展开羽翼，将它送达你的身边。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- Script for gallery Here -->
+            <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+            <script type="text/javascript">
+            $(function() {
+
+                var filterList = {
+
+                    init: function() {
+
+                        // MixItUp plugin
+                        // http://mixitup.io
+                        $('#portfoliolist').mixitup({
+                            targetSelector: '.portfolio',
+                            filterSelector: '.filter',
+                            effects: ['fade'],
+                            easing: 'snap',
+                            // call the hover effect
+                            onMixEnd: filterList.hoverEffect()
+                        });
+
+                    },
+
+                    hoverEffect: function() {
+
+                        // Simple parallax effect
+                        $('#portfoliolist .portfolio').hover(
+                            function() {
+                                $(this).find('.label').stop().animate({ bottom: 0 }, 200, 'easeOutQuad');
+                                $(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
+                            },
+                            function() {
+                                $(this).find('.label').stop().animate({ bottom: -40 }, 200, 'easeInQuad');
+                                $(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
+                            }
+                        );
+
+                    }
+
+                };
+
+                // Run the show!
+                filterList.init();
+            });
+            </script>
+            <!-- Gallery Script Ends -->
+            <div class="about">
+                <h3>碎碎念</h3>
+                <div class="col-md-8 dem">
+                    <h4>做这个网页的初衷</h4>
+                    <p>
+                        其实这是一个很早就已经有的计划，希望能够做一个宫崎骏相关的个人动漫网站，因为对于我来说，宫崎骏的作品就是当今形形色色的动漫作品中的一股清流，
+                        他的每一部电影对于我来说都是独特的存在，每一步电影所展现出来的主题都是这么的美好。我在其中并没有看到刻意去打造卖点，每一部电影都从非常细腻的角度展现出了非常温柔的一面。从刚开始看千与千寻的时候我就感觉这部电影和其他的电影很不一样，它的画风让人觉得非常细腻富有表现力，富有童真，其次就是宫爷爷天马行空的想象力。所以从最开始的几个片段我就被深深吸引，从这之后我就挨个看边了宫崎骏的所有作品，每一部都看了非常有感触，天空之城更是让我深受震撼，帕鲁的勇敢无畏，希达的可爱善良，每一个细节都深深打动了我。此类的感触还有非常非常多，每一部电影都让我有不同的感触，每一部电影我都会重耍好多遍。
+                    </p><br>
+                    <p>
+                        借着这次Web的期末作业，我终于开始着手完成了这个项目，我会不断完善这个项目，并且珍惜这个项目，作为一个过往的记忆，当我迷茫时或许又能在这里找到动力！
+                    </p>
+                    <div class="call">
+                        <ul class=" call-in">
+                            <li><a href="https://t.me/chromoe" target="_blank"><i class="tin"> </i></a></li>
+                            <li><a href="mailto:angelmoe@outlook.fr" target="_blank"><i class="gmail"> </i></a></li>
+                            <li><a href="https://blog.cco.moe" target="_blank"><i class="browser"> </i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 men">
+                    <a href="https://blog.cco.moe" target="_blank"><img class="img-responsive" src="images/avatar.png" alt="" /></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="footer">
+        <div class="container">
+            <p class="footer-class">©2024 🗻 | made with love by <a target="_blank" href="https://blog.cco.moe">Chromoe</a></p>
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+                            var defaults = {
+                                containerID: 'toTop',
+                                containerHoverID: 'toTopHover',
+                                scrollSpeed: 1200,
+                                easingType: 'linear' 
+                            };
+                            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+        </script>
+        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    </div>
+</body>
+
+</html>
