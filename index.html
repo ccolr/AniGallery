@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>御宅计划 OtakuProject</title>
+    <title>御宅计划 Otaku Project</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccolr/library@main/cursor/mouse.css">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -29,18 +29,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="js/responsiveslides.min.js"></script>
     <script>
         // 也能使用 "$(window).load(function() {"
-    // 轮播图实现函数
-    $(function () {
-      // Slideshow 1
-      $("#slider1").responsiveSlides({
-         auto: true, // 自动播放
-         nav: true, // 显示导航
-         speed: 500, // 轮播速度
-         namespace: "callbacks", // 命名空间
-         // pager: true, // 显示分页
-      });
-    });
-  </script>
+        // 轮播图实现函数
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                auto: true, // 自动播放
+                nav: true, // 显示导航
+                speed: 500, // 轮播速度
+                namespace: "callbacks", // 命名空间
+                // pager: true, // 显示分页
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -57,11 +57,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                     <!--script-->
                     <script>
-                        $("span.menu").click(function(){
-                        $(".top-nav ul").slideToggle(500, function(){
+                        $("span.menu").click(function () {
+                            $(".top-nav ul").slideToggle(500, function () {
+                            });
                         });
-                    });
-            </script>
+                    </script>
                 </div>
                 <div class="header-top-on">
                     <ul class="social-in">
@@ -81,7 +81,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="search">
                     <form>
-                        <input type="text" value="Search the site..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+                        <input type="text" value="Search the site..." onfocus="this.value = '';"
+                            onblur="if (this.value == '') {this.value = '';}">
                         <input type="submit" value="">
                     </form>
                 </div>
@@ -117,10 +118,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h2>“ Welcome to the <span>Animation Gallery</span> ”</h2>
                 <h2>“ 这是宫崎骏爷爷为我们打造的童话世界，也是我们的美好回忆 ”</h2>
                 <ul id="filters">
-                    <li><span class="filter " data-filter="qian tian cheng feng">All</span><label class="arrow"> </label></li>
-                    <li><span class="filter" data-filter="qian"> 千と千尋の神隠し </span><label class="arrow arrow1"> </label></li>
-                    <li><span class="filter" data-filter="tian"> 天空の城ラピュタ </span><label class="arrow arrow2 "> </label></li>
-                    <li><span class="filter" data-filter="cheng"> ハウルの動く城 </span><label class="arrow arrow3"> </label></li>
+                    <li><span class="filter " data-filter="qian tian cheng feng">All</span><label class="arrow">
+                        </label></li>
+                    <li><span class="filter" data-filter="qian"> 千と千尋の神隠し </span><label class="arrow arrow1"> </label>
+                    </li>
+                    <li><span class="filter" data-filter="tian"> 天空の城ラピュタ </span><label class="arrow arrow2 "> </label>
+                    </li>
+                    <li><span class="filter" data-filter="cheng"> ハウルの動く城 </span><label class="arrow arrow3"> </label>
+                    </li>
                     <li><span class="filter" data-filter="feng"> 風立ちぬ </span><label class="arrow arrow4"> </label></li>
                     <div class="clearfix"> </div>
                 </ul>
@@ -219,46 +224,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!-- Script for gallery Here -->
             <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
             <script type="text/javascript">
-            $(function() {
+                $(function () {
 
-                var filterList = {
+                    var filterList = {
 
-                    init: function() {
+                        init: function () {
 
-                        // MixItUp plugin
-                        // http://mixitup.io
-                        $('#portfoliolist').mixitup({
-                            targetSelector: '.portfolio',
-                            filterSelector: '.filter',
-                            effects: ['fade'],
-                            easing: 'snap',
-                            // call the hover effect
-                            onMixEnd: filterList.hoverEffect()
-                        });
+                            // MixItUp plugin
+                            // http://mixitup.io
+                            $('#portfoliolist').mixitup({
+                                targetSelector: '.portfolio',
+                                filterSelector: '.filter',
+                                effects: ['fade'],
+                                easing: 'snap',
+                                // call the hover effect
+                                onMixEnd: filterList.hoverEffect()
+                            });
 
-                    },
+                        },
 
-                    hoverEffect: function() {
+                        hoverEffect: function () {
 
-                        // Simple parallax effect
-                        $('#portfoliolist .portfolio').hover(
-                            function() {
-                                $(this).find('.label').stop().animate({ bottom: 0 }, 200, 'easeOutQuad');
-                                $(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
-                            },
-                            function() {
-                                $(this).find('.label').stop().animate({ bottom: -40 }, 200, 'easeInQuad');
-                                $(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
-                            }
-                        );
+                            // Simple parallax effect
+                            $('#portfoliolist .portfolio').hover(
+                                function () {
+                                    $(this).find('.label').stop().animate({ bottom: 0 }, 200, 'easeOutQuad');
+                                    $(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
+                                },
+                                function () {
+                                    $(this).find('.label').stop().animate({ bottom: -40 }, 200, 'easeInQuad');
+                                    $(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
+                                }
+                            );
 
-                    }
+                        }
 
-                };
+                    };
 
-                // Run the show!
-                filterList.init();
-            });
+                    // Run the show!
+                    filterList.init();
+                });
             </script>
             <!-- Gallery Script Ends -->
             <div class="about">
@@ -282,7 +287,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="clearfix"> </div>
                 </div>
                 <div class="col-md-4 men">
-                    <a href="https://blog.cco.moe" target="_blank"><img class="img-responsive" src="images/avatar.png" alt="" /></a>
+                    <a href="https://blog.cco.moe" target="_blank"><img class="img-responsive" src="images/avatar.png"
+                            alt="" /></a>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -291,22 +297,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!---->
     <div class="footer">
         <div class="container">
-            <p class="footer-class">©2024 🗻 | made with love by <a target="_blank" href="https://blog.cco.moe">Jay</a></p>
+            <p class="footer-class">©2024 🗻 | made with love by <a target="_blank" href="https://blog.cco.moe">Jay</a>
+            </p>
         </div>
         <script type="text/javascript">
-        $(document).ready(function() {
-            /*
-                            var defaults = {
-                                containerID: 'toTop',
-                                containerHoverID: 'toTopHover',
-                                scrollSpeed: 1200,
-                                easingType: 'linear' 
-                            };
-                            */
+            $(document).ready(function () {
+                /*
+                                var defaults = {
+                                    containerID: 'toTop',
+                                    containerHoverID: 'toTopHover',
+                                    scrollSpeed: 1200,
+                                    easingType: 'linear' 
+                                };
+                                */
 
-            $().UItoTop({ easingType: 'easeOutQuart' });
+                $().UItoTop({ easingType: 'easeOutQuart' });
 
-        });
+            });
         </script>
         <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     </div>
