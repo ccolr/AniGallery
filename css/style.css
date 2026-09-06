@@ -490,6 +490,16 @@ div#portfoliolist {
   font-size: 1.3em;
   padding: 0 0 0.5em;
 }
+.gir h5 a {
+  color: #787b86;
+  text-decoration: none;
+  display: block;
+}
+.gir h5 a:hover,
+.gir h5 a:focus {
+  color: #839655;
+  text-decoration: none;
+}
 .gir p {
   color: #afb2bf;
   font-size: 0.9em;
