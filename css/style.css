@@ -316,6 +316,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   color: #7e983f;
 }
 #filters {
+  display: flow-root;
   border-top: 1px solid #e4e6ec;
   border-bottom: 1px solid #e4e6ec;
   border-left: 1px solid #e4e6ec;
@@ -379,6 +380,11 @@ label.arrow6 {
 }
 #filters li span:hover {
   background: #e4e6ec;
+}
+#filters li span.active {
+  color: #5e6375;
+  background: #e4e6ec;
+  font-weight: 600;
 }
 #filters li:hover label.arrow {
   display: block;
@@ -1086,21 +1092,35 @@ p.footer-class a:hover {
     margin: 0 0 1em;
   }
   #filters {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 0;
+    border-top: 1px solid #e4e6ec;
+    border-left: 1px solid #e4e6ec;
   }
   #filters li {
     display: block;
     float: none;
-    flex: 1 1 50%;
+    box-sizing: border-box;
+    border: 0;
+    border-right: 1px solid #e4e6ec;
+    border-bottom: 1px solid #e4e6ec;
+  }
+  #filters li:first-child {
+    grid-column: 1 / -1;
   }
   #filters li span {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    padding: 8px 9px;
+    min-height: 56px;
+    padding: 10px 8px;
     text-align: center;
+    font-size: clamp(0.875rem, 3.8vw, 1rem);
+    font-weight: 600;
+    line-height: 1.4;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
   }
   label.arrow,
   label.arrow1,
@@ -1109,8 +1129,7 @@ p.footer-class a:hover {
   label.arrow4,
   label.arrow5,
   label.arrow6 {
-    left: 50%;
-    transform: translateX(-50%);
+    display: none !important;
   }
   .callbacks_nav {
     left: 8px;
