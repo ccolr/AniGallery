@@ -46,7 +46,7 @@ ul.social-in li {
   display: inline-block;
 }
 ul.social-in li i {
-  background: url(../images/img-sprite.png) no-repeat -18px -14px;
+  background: url(../images/img-sprite.webp) no-repeat -18px -14px;
   width: 35px;
   height: 35px;
   display: inline-block;
@@ -124,9 +124,13 @@ ul.social-in li i.browser:hover {
 }
 /*----*/
 .top-nav span.menu:before {
-  content: url(../images/menu.png) no-repeat 0px 0px;
+  content: "";
+  display: inline-block;
+  background: url(../images/menu.webp) no-repeat center;
+  background-size: 32px 32px;
   cursor: pointer;
-  width: 100%;
+  width: 32px;
+  height: 32px;
 }
 .top-nav span.menu {
   display: none;
@@ -136,7 +140,6 @@ ul.social-in li i.browser:hover {
   .top-nav ul {
     display: none;
     position: absolute;
-    position: absolute;
     width: 96.5%;
     z-index: 9999;
     left: 2%;
@@ -144,11 +147,13 @@ ul.social-in li i.browser:hover {
     background: #838383;
   }
   .top-nav span.menu {
-    display: block;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
     position: relative;
     text-align: center;
-    height: 30px;
+    height: 44px;
   }
   .top-nav ul li,
   .top-nav ul li.active {
@@ -195,7 +200,7 @@ ul.social-in li i.browser:hover {
 .search input[type="submit"] {
   width: 20px;
   height: 20px;
-  background: url(../images/img-sprite.png) -246px -28px no-repeat;
+  background: url(../images/img-sprite.webp) -246px -28px no-repeat;
   padding: 0px 1px;
   border: none;
   cursor: pointer;
@@ -268,16 +273,28 @@ ul.callbacks_tabs.callbacks1_tabs {
 .callbacks_nav {
   position: absolute;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  top: 37%;
+  top: 50%;
   left: 3%;
-  opacity: 0.7;
+  transform: translateY(-50%);
+  opacity: 0.85;
   z-index: 3;
   text-indent: -9999px;
   overflow: hidden;
   text-decoration: none;
   height: 104px;
-  width: 38px;
-  background: transparent url("../images/img-sprite.png") no-repeat -360px 0px;
+  width: 44px;
+  background: transparent url("../images/img-sprite.webp") no-repeat -360px 0px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: opacity 0.2s ease;
+}
+.callbacks_nav:hover,
+.callbacks_nav:focus {
+  opacity: 1;
+}
+.callbacks_nav:focus-visible {
+  outline: 3px solid #7e983f;
+  outline-offset: 3px;
 }
 .callbacks_nav.next {
   left: auto;
@@ -333,7 +350,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   cursor: pointer;
 }
 label.arrow {
-  background: url(../images/ar.png) no-repeat 0px 0px;
+  background: url(../images/ar.webp) no-repeat 0px 0px;
   width: 21px;
   height: 13px;
   overflow: hidden;
@@ -390,9 +407,9 @@ div#portfoliolist {
   padding: 1em 0;
 }
 .portfolio-wrapper span.arrow {
-  background: url(../images/arrow.png) no-repeat 0px 0px;
-  width: 49px;
-  height: 26px;
+  background: url(../images/ar.webp) no-repeat 0px 0px;
+  width: 26px;
+  height: 17px;
   display: inline-block;
   position: absolute;
   bottom: 50px;
@@ -466,7 +483,7 @@ ul.call-in li span {
   vertical-align: middle;
 }
 ul.call-in li i {
-  background: url(../images/img-sprite.png) no-repeat -279px -14px;
+  background: url(../images/img-sprite.webp) no-repeat -279px -14px;
   width: 35px;
   height: 35px;
   display: inline-block;
@@ -707,7 +724,7 @@ ul.popular li a {
   -ms-transition: 0.5s all;
 }
 ul.popular li span.dot {
-  background: url(../images/img-sprite.png) no-repeat -452px -43px;
+  background: url(../images/img-sprite.webp) no-repeat -452px -43px;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -902,7 +919,7 @@ p.footer-class a:hover {
   height: 52px;
   border: none;
   text-indent: 100%;
-  background: url("../images/up.png") no-repeat 0px 0px;
+  background: url("../images/up.webp") no-repeat center;
 }
 /*--responsive--*/
 @media (max-width: 1440px) {
@@ -1059,17 +1076,52 @@ p.footer-class a:hover {
 }
 @media (max-width: 480px) {
   #portfoliolist .portfolio {
-    width: 49%;
+    width: 100%;
+    margin: 0 0 1em;
   }
   #portfoliolist .portfolio:nth-child(2),
-  #portfoliolist .portfolio:nth-child(6) {
-    margin: 0 0% 2% 0;
+  #portfoliolist .portfolio:nth-child(4),
+  #portfoliolist .portfolio:nth-child(6),
+  #portfoliolist .portfolio:nth-child(8) {
+    margin: 0 0 1em;
+  }
+  #filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #filters li {
+    display: block;
+    float: none;
+    flex: 1 1 50%;
   }
   #filters li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
     padding: 8px 9px;
+    text-align: center;
+  }
+  label.arrow,
+  label.arrow1,
+  label.arrow2,
+  label.arrow3,
+  label.arrow4,
+  label.arrow5,
+  label.arrow6 {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .callbacks_nav {
-    top: 26%;
+    left: 8px;
+    width: 44px;
+    height: 82px;
+    background-position: -279px 0px;
+    background-size: 400px auto;
+  }
+  .callbacks_nav.next {
+    right: 8px;
+    background-position: -307px 0px;
   }
   ul.callbacks_tabs.callbacks1_tabs {
     bottom: -39px;
@@ -1079,6 +1131,10 @@ p.footer-class a:hover {
   }
   .gir h5 {
     font-size: 1em;
+  }
+  .gir p {
+    height: auto;
+    overflow: visible;
   }
   .search {
     width: 42%;
@@ -1125,27 +1181,6 @@ p.footer-class a:hover {
   .contact-left input[type="submit"] {
     width: 30%;
   }
-  label.arrow {
-    left: 3px;
-  }
-  label.arrow1 {
-    left: 9px;
-  }
-  label.arrow2 {
-    left: 23px;
-  }
-  label.arrow3 {
-    left: 11px;
-  }
-  label.arrow4 {
-    left: 31px;
-  }
-  label.arrow5 {
-    left: 14px;
-  }
-  label.arrow6 {
-    left: 23px;
-  }
   .header-bottom {
     padding: 1.5em 0;
   }
@@ -1185,17 +1220,7 @@ p.footer-class a:hover {
     font-size: 0.8em;
   }
   .search input[type="submit"] {
-    background: url(../images/img-sprite.png) -246px -31px no-repeat;
-  }
-  .callbacks_nav {
-    top: 15%;
-    height: 82px;
-    width: 38px;
-    background: transparent url("../images/img-sprite.png") no-repeat -279px 0px;
-    background-size: 400px;
-  }
-  .callbacks_nav.next {
-    background-position: -307px 0px;
+    background: url(../images/img-sprite.webp) -246px -31px no-repeat;
   }
   ul.callbacks_tabs.callbacks1_tabs {
     bottom: -29px;
@@ -1244,28 +1269,6 @@ p.footer-class a:hover {
   }
   div#portfoliolist {
     padding: 1em 0;
-  }
-  label.arrow {
-    left: 9px;
-    bottom: -12px;
-  }
-  label.arrow1 {
-    left: 16px;
-  }
-  label.arrow2 {
-    left: 23px;
-  }
-  label.arrow3 {
-    left: 18px;
-  }
-  label.arrow4 {
-    left: 40px;
-  }
-  label.arrow5 {
-    left: 21px;
-  }
-  label.arrow6 {
-    left: 28px;
   }
   .about {
     padding: 1.5em;
