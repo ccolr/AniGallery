@@ -690,14 +690,25 @@ h5.fast-in {
   height: auto;
   overflow: visible;
 }
+.video-wrapper {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
 .blog-video {
   display: block;
   width: 100%;
-  max-width: 100%;
+  min-width: min(280px, 100%);
+  max-width: min(100%, 852px);
   height: auto;
-  aspect-ratio: 16 / 9;
+  max-height: 480px;
+  aspect-ratio: 852 / 480;
   object-fit: contain;
   background: #000;
+  margin-inline: auto;
 }
 .grid-men {
   padding: 2em 0;
