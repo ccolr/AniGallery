@@ -699,6 +699,10 @@ h5.fast-in {
   padding: 0;
   row-gap: clamp(20px, 3vw, 32px);
 }
+.video-item {
+  width: 100%;
+  margin: 0;
+}
 .blog-video {
   display: block;
   width: 100%;
@@ -710,6 +714,25 @@ h5.fast-in {
   object-fit: contain;
   background: #000;
   margin-inline: auto;
+}
+.video-source {
+  width: 100%;
+  max-width: 852px;
+  box-sizing: border-box;
+  margin: 10px auto 0;
+  color: #a09f9f;
+  font-size: 0.95em;
+  line-height: 1.5;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.video-source a {
+  color: #7e983f;
+  text-decoration: none;
+}
+.video-source a:hover,
+.video-source a:focus {
+  text-decoration: underline;
 }
 .grid-men {
   padding: 2em 0;
