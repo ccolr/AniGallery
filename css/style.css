@@ -697,6 +697,7 @@ h5.fast-in {
   max-width: 100%;
   box-sizing: border-box;
   padding: 0;
+  row-gap: clamp(20px, 3vw, 32px);
 }
 .blog-video {
   display: block;
