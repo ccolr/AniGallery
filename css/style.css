@@ -687,6 +687,19 @@ h5.fast-in {
   font-size: 1em;
   line-height: 1.7em;
 }
+.grid-men p.text-in {
+  height: auto;
+  overflow: visible;
+}
+.blog-video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
+}
 .grid-men {
   padding: 2em 0;
 }
@@ -958,10 +971,6 @@ p.footer-class a:hover {
   ul.popular li a {
     font-size: 0.9em;
   }
-  p.text-in {
-    height: 206px;
-    overflow: hidden;
-  }
 }
 @media (max-width: 768px) {
   .top-nav {
@@ -1001,12 +1010,18 @@ p.footer-class a:hover {
     font-size: 1.3em;
   }
   .sin-on {
-    width: 40%;
-    float: left;
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin-bottom: 1.5em;
+  }
+  .sin-on img {
+    margin: 0 auto;
   }
   .simply {
-    float: left;
-    width: 60%;
+    float: none;
+    width: 100%;
+    padding: 0;
   }
   ul.popular li a {
     font-size: 1.1em;
@@ -1072,9 +1087,6 @@ p.footer-class a:hover {
   .top-blog a.fast,
   h5.fast-in {
     font-size: 0.9em;
-  }
-  p.text-in {
-    height: 166px;
   }
   .table-form input[type="submit"] {
     width: 20%;
@@ -1180,19 +1192,6 @@ p.footer-class a:hover {
   .top-blog {
     margin: 0.8em 0em 0em 1em;
     width: 84%;
-  }
-  .sin-on {
-    width: 100%;
-    float: none;
-    padding: 0;
-  }
-  .sin-on img {
-    margin: 0 auto;
-  }
-  .simply {
-    float: none;
-    width: 100%;
-    padding: 1em 0 0;
   }
   a.more-dummy {
     width: 29%;
