@@ -83,9 +83,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="search">
                     <form id="title-search">
-                        <input type="text" name="query" placeholder="Search the site..." aria-label="按标题搜索">
+                        <input type="text" name="query" placeholder="Search the site..." aria-label="按标题搜索"
+                            aria-controls="title-search-results" aria-expanded="false" aria-autocomplete="list"
+                            autocomplete="off">
                         <input type="submit" value="">
                     </form>
+                    <ul id="title-search-results" class="title-search-results" role="listbox"></ul>
                 </div>
                 <div class="clearfix"> </div>
             </div>

@@ -208,6 +208,40 @@ ul.social-in li i.browser:hover {
   top: 6px;
   right: 3px;
 }
+.title-search-results {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 240px;
+  max-height: 260px;
+  margin: 0;
+  padding: 6px 0;
+  overflow-y: auto;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.title-search-results.is-open {
+  display: block;
+}
+.title-search-results a,
+.title-search-results .empty-result {
+  display: block;
+  padding: 9px 12px;
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+.title-search-results a:hover,
+.title-search-results a:focus {
+  color: #fff;
+  background: #f6b319;
+  text-decoration: none;
+}
 /*--- slider-css --*/
 .slider {
   position: relative;

@@ -21,29 +21,79 @@
 
     function init($) {
         var $form = $('#title-search');
-        var $gallery = $('#portfoliolist');
+        var $input = $form.find('[name="query"]');
+        var $results = $('#title-search-results');
+        var $items = $('#portfoliolist').find('.portfolio');
 
-        $form.on('submit', function (event) {
-            var query = $form.find('[name="query"]').val();
-            var $items = $gallery.find('.portfolio');
+        function closeResults() {
+            $results.removeClass('is-open').empty();
+            $input.attr('aria-expanded', 'false');
+        }
 
-            event.preventDefault();
-            $items.removeClass('search-match');
-
-            if (!normalise(query)) {
-                $gallery.mixitup('filter', 'all');
-                return;
-            }
+        function findMatches(query) {
+            var matches = [];
 
             $items.each(function () {
                 var $item = $(this);
+                var title = $item.find('h5').text();
 
-                if (titleMatches($item.find('h5').text(), query)) {
-                    $item.addClass('search-match');
+                if (titleMatches(title, query)) {
+                    matches.push({
+                        title: title,
+                        href: $item.find('a').first().attr('href')
+                    });
                 }
             });
 
-            $gallery.mixitup('filter', 'search-match');
+            return matches;
+        }
+
+        function showCandidates(query) {
+            var matches;
+
+            if (!normalise(query)) {
+                closeResults();
+                return [];
+            }
+
+            matches = findMatches(query);
+            $results.empty();
+
+            if (matches.length) {
+                $.each(matches, function (_, match) {
+                    $('<a></a>').attr('href', match.href).text(match.title)
+                        .appendTo($('<li role="option"></li>').appendTo($results));
+                });
+            } else {
+                $('<li class="empty-result" role="option">未找到匹配标题</li>').appendTo($results);
+            }
+
+            $results.addClass('is-open');
+            $input.attr('aria-expanded', 'true');
+            return matches;
+        }
+
+        $input.on('input', function () {
+            showCandidates($input.val());
+        });
+
+        $form.on('submit', function (event) {
+            var query = $input.val();
+
+            event.preventDefault();
+            showCandidates(query);
+        });
+
+        $input.on('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeResults();
+            }
+        });
+
+        $(document).on('click', function (event) {
+            if (!$(event.target).closest('.search').length) {
+                closeResults();
+            }
         });
     }
 
