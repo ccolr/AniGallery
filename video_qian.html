@@ -8,6 +8,8 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- jQuery (Bootstrap的插件必须有的) -->
     <script src="js/jquery.min.js"></script>
+    <script defer src="js/site-search-index.js"></script>
+    <script defer src="js/title-search.js"></script>
     <!--主题格式-->
     <link href="css/style.css?v=20260906-3" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,11 +61,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="./"><img src="images/AniGallery.webp" alt=""></a>
                 </div>
                 <div class="search">
-                    <form>
-                        <input type="text" value="Search the site..." onfocus="this.value = '';"
-                            onblur="if (this.value == '') {this.value = '';}">
-                        <input type="submit" value="">
+                    <form id="title-search" class="site-search-form" role="search">
+                        <input type="text" name="query" placeholder="Search the site..." aria-label="搜索全站文章"
+                            aria-controls="title-search-results" aria-expanded="false" aria-autocomplete="list"
+                            autocomplete="off">
+                        <input type="submit" value="" aria-label="提交搜索">
                     </form>
+                    <ul id="title-search-results" class="title-search-results" role="listbox"
+                        aria-label="文章搜索结果"></ul>
                 </div>
                 <div class="clearfix"> </div>
             </div>
