@@ -948,10 +948,6 @@ p.footer-class a:hover {
 @media (max-width: 1280px) {
 }
 @media (max-width: 1024px) {
-  .book p {
-    height: 218px;
-    overflow: hidden;
-  }
   span.in-sed {
     margin-right: 3%;
   }
@@ -960,10 +956,6 @@ p.footer-class a:hover {
   }
   .left-sit p {
     margin: 0.2em 0 0;
-  }
-  .grid-men p {
-    height: 166px;
-    overflow: hidden;
   }
   a.more-dummy {
     width: 27%;
@@ -1060,18 +1052,11 @@ p.footer-class a:hover {
   .port h2 {
     font-size: 1.5em;
   }
-  .gir p {
-    height: 74px;
-    overflow: hidden;
-  }
   .about-us h2 {
     padding: 0 0em 0.5em;
   }
   a.more-dummy {
     width: 33%;
-  }
-  .grid-men p {
-    height: 119px;
   }
   .blog-left b {
     font-size: 2.5em;
@@ -1163,10 +1148,6 @@ p.footer-class a:hover {
   .gir h5 {
     font-size: 1em;
   }
-  .gir p {
-    height: auto;
-    overflow: visible;
-  }
   .search {
     width: 42%;
   }
@@ -1182,9 +1163,10 @@ p.footer-class a:hover {
   }
   .top-blog a.fast,
   h5.fast-in {
-    height: 17px;
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
     display: block;
+    line-height: 1.4;
   }
   .blog-left {
     padding-right: 0.5em;
@@ -1276,8 +1258,6 @@ p.footer-class a:hover {
   .dem p {
     font-size: 0.9em;
     line-height: 1.8em;
-    height: 87px;
-    overflow: hidden;
   }
   .call {
     padding: 1em 0 1em;
@@ -1305,7 +1285,6 @@ p.footer-class a:hover {
     padding: 1.5em 0.5em;
   }
   .book p {
-    height: 97px;
     font-size: 0.9em;
   }
   .in-profile h4 {
@@ -1342,8 +1321,8 @@ p.footer-class a:hover {
     width: 76%;
   }
   .top-blog p {
-    height: 20px;
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
     font-size: 0.9em;
   }
   .single-top {
