@@ -12,7 +12,7 @@
     <script defer src="js/site-search-index.js"></script>
     <script defer src="js/title-search.js"></script>
     <!--主题格式-->
-    <link href="css/style.css?v=20260906-2" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css?v=20260907-1" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Portfolic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -86,8 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             autocomplete="off">
                         <input type="submit" value="" aria-label="提交搜索">
                     </form>
-                    <ul id="title-search-results" class="title-search-results" role="listbox"
-                        aria-label="文章搜索结果"></ul>
+                    <ul id="title-search-results" class="title-search-results" role="listbox" aria-label="文章搜索结果"></ul>
                 </div>
                 <div class="clearfix"> </div>
             </div>
@@ -119,21 +118,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="port">
                 <h2>“ Welcome to the <span>Animation Gallery</span> ”</h2>
-                <h2>“ 这是宫崎骏爷爷为我们打造的童话世界，也是我们的美好回忆 ”</h2>
-                <ul id="filters">
-                    <li><span class="filter " data-filter="qian tian cheng feng">All</span><label class="arrow">
-                        </label></li>
-                    <li><span class="filter" data-filter="qian"> 千と千尋の神隠し </span><label class="arrow arrow1"> </label>
-                    </li>
-                    <li><span class="filter" data-filter="tian"> 天空の城ラピュタ </span><label class="arrow arrow2 "> </label>
-                    </li>
-                    <li><span class="filter" data-filter="cheng"> ハウルの動く城 </span><label class="arrow arrow3"> </label>
-                    </li>
-                    <li><span class="filter" data-filter="feng"> 風立ちぬ </span><label class="arrow arrow4"> </label></li>
-                </ul>
             </div>
             <div id="portfoliolist">
-                <div class="portfolio qian mix_all" data-cat="qian" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper ">
                         <a href="plot_qian.html">
                             <img class="img-responsive" src="images/p1.webp" alt="" />
@@ -144,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="portfolio qian mix_all" data-cat="qian" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper">
                         <a href="video_qian.html">
                             <img class="img-responsive" src="images/p2.webp" alt="" />
@@ -155,7 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="portfolio tian mix_all" data-cat="tian" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper">
                         <a href="plot_tian.html">
                             <img class="img-responsive" src="images/p3.webp" alt="" />
@@ -166,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="portfolio tian mix_all" data-cat="tian" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper ">
                         <a href="video_tian.html">
                             <img class="img-responsive" src="images/p4.webp" alt="" />
@@ -177,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="portfolio cheng mix_all" data-cat="cheng" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper ">
                         <a href="plot_cheng.html">
                             <img class="img-responsive" src="images/p5.webp" alt="" />
@@ -188,7 +175,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="portfolio cheng mix_all" data-cat="cheng" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper">
                         <a href="video_cheng.html">
                             <img class="img-responsive" src="images/p6.webp" alt="" />
@@ -199,7 +186,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="portfolio feng mix_all" data-cat="feng" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper">
                         <a href="plot_feng.html">
                             <img class="img-responsive" src="images/p7.webp" alt="" />
@@ -210,7 +197,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                 </div>
-                <div class="portfolio feng mix_all" data-cat="feng" style="display: inline-block; opacity: 1;">
+                <div class="portfolio">
                     <div class="portfolio-wrapper">
                         <a href="video_feng.html">
                             <img class="img-responsive" src="images/p8.webp" alt="" />
@@ -223,51 +210,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="clearfix"> </div>
             </div>
-            <!-- Script for gallery Here -->
-            <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+            <!-- Card hover effect -->
             <script type="text/javascript">
                 $(function () {
-
-                    var filterList = {
-
-                        init: function () {
-
-                            // MixItUp plugin
-                            // http://mixitup.io
-                            $('#portfoliolist').mixitup({
-                                targetSelector: '.portfolio',
-                                filterSelector: '.filter',
-                                effects: ['fade'],
-                                easing: 'snap',
-                                // call the hover effect
-                                onMixEnd: filterList.hoverEffect()
-                            });
-
+                    $('#portfoliolist .portfolio').hover(
+                        function () {
+                            $(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
                         },
-
-                        hoverEffect: function () {
-
-                            // Simple parallax effect
-                            $('#portfoliolist .portfolio').hover(
-                                function () {
-                                    $(this).find('.label').stop().animate({ bottom: 0 }, 200, 'easeOutQuad');
-                                    $(this).find('img').stop().animate({ top: -30 }, 500, 'easeOutQuad');
-                                },
-                                function () {
-                                    $(this).find('.label').stop().animate({ bottom: -40 }, 200, 'easeInQuad');
-                                    $(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
-                                }
-                            );
-
+                        function () {
+                            $(this).find('img').stop().animate({ top: 0 }, 300, 'easeOutQuad');
                         }
-
-                    };
-
-                    // Run the show!
-                    filterList.init();
+                    );
                 });
             </script>
-            <!-- Gallery Script Ends -->
             <div class="about">
                 <h3>碎碎念</h3>
                 <div class="col-md-8 dem">

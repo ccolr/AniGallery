@@ -365,86 +365,17 @@ ul.callbacks_tabs.callbacks1_tabs {
 .port h2 span {
   color: #7e983f;
 }
-#filters {
-  display: flow-root;
-  border-top: 1px solid #e4e6ec;
-  border-bottom: 1px solid #e4e6ec;
-  border-left: 1px solid #e4e6ec;
-  border-right: none;
-}
-#filters li {
-  display: inline-block;
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -o-inline-box;
-  display: -ms-inline-box;
-  position: relative;
-  float: left;
-  border-left: 1px solid #e4e6ec;
-}
 .work-top {
   border-top: 1px solid #a1ca6c;
   border-bottom: 1px solid #a1ca6c;
   padding: 1.5em 0;
-}
-#filters li span {
-  display: block;
-  padding: 12px 20px;
-  text-decoration: none;
-  color: #8a8e9e;
-  font-size: 0.9em;
-  transition: 0.5s all;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -ms-transition: 0.5s all;
-  cursor: pointer;
-}
-label.arrow {
-  background: url(../images/ar.webp) no-repeat 0px 0px;
-  width: 21px;
-  height: 13px;
-  overflow: hidden;
-  position: absolute;
-  bottom: -13px;
-  left: 12px;
-  display: none;
-}
-label.arrow1 {
-  left: 20px;
-}
-label.arrow2 {
-  left: 29px;
-}
-label.arrow3 {
-  left: 16px;
-}
-label.arrow4 {
-  left: 41px;
-}
-label.arrow5 {
-  left: 26px;
-}
-label.arrow6 {
-  left: 31px;
-}
-#filters li span:hover {
-  background: #e4e6ec;
-}
-#filters li span.active {
-  color: #5e6375;
-  background: #e4e6ec;
-  font-weight: 600;
-}
-#filters li:hover label.arrow {
-  display: block;
 }
 #portfoliolist .portfolio {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   width: 23.5%;
-  display: none;
+  display: block;
   float: left;
   overflow: hidden;
   margin: 0 2% 2% 0;
@@ -462,16 +393,8 @@ div#portfoliolist {
   font-size: 1.1em;
   padding: 1em 0;
 }
-.portfolio-wrapper span.arrow {
-  background: url(../images/ar.webp) no-repeat 0px 0px;
-  width: 26px;
-  height: 17px;
-  display: inline-block;
-  position: absolute;
-  bottom: 50px;
-  left: 114px;
-}
 .portfolio img {
+  position: relative;
   width: 100%;
   transition: all 300ms !important;
   -webkit-transition: all 300ms !important;
@@ -1183,46 +1106,6 @@ p.footer-class a:hover {
   #portfoliolist .portfolio:nth-child(8) {
     margin: 0 0 1em;
   }
-  #filters {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    border: 0;
-    border-top: 1px solid #e4e6ec;
-    border-left: 1px solid #e4e6ec;
-  }
-  #filters li {
-    display: block;
-    float: none;
-    box-sizing: border-box;
-    border: 0;
-    border-right: 1px solid #e4e6ec;
-    border-bottom: 1px solid #e4e6ec;
-  }
-  #filters li:first-child {
-    grid-column: 1 / -1;
-  }
-  #filters li span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 56px;
-    padding: 10px 8px;
-    text-align: center;
-    font-size: clamp(0.875rem, 3.8vw, 1rem);
-    font-weight: 600;
-    line-height: 1.4;
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-  }
-  label.arrow,
-  label.arrow1,
-  label.arrow2,
-  label.arrow3,
-  label.arrow4,
-  label.arrow5,
-  label.arrow6 {
-    display: none !important;
-  }
   .callbacks_nav {
     left: 8px;
     width: 44px;
@@ -1328,13 +1211,6 @@ p.footer-class a:hover {
   .port h2 {
     font-size: 1.2em;
     padding: 0.5em 0;
-  }
-  #filters,
-  #filters li {
-    border: none;
-  }
-  #filters li span {
-    padding: 8px 15px;
   }
   .gir h5 {
     font-size: 0.8em;
