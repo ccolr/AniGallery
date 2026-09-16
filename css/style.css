@@ -273,6 +273,7 @@ ul.social-in li i.browser:hover {
 }
 .rslides li {
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: absolute;
   display: none;
   width: 100%;
@@ -342,13 +343,15 @@ ul.callbacks_tabs.callbacks1_tabs {
   touch-action: manipulation;
   transition: opacity 0.2s ease;
 }
-.callbacks_nav:hover,
-.callbacks_nav:focus {
-  opacity: 1;
-}
 .callbacks_nav:focus-visible {
+  opacity: 1;
   outline: 3px solid #7e983f;
   outline-offset: 3px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .callbacks_nav:hover {
+    opacity: 1;
+  }
 }
 .callbacks_nav.next {
   left: auto;
@@ -378,6 +381,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
+  box-sizing: border-box;
   width: 23.5%;
   display: block;
   float: left;
@@ -838,6 +842,7 @@ ul.popular li a:hover {
   outline: none;
   margin: 0 auto;
   -webkit-appearance: none;
+  appearance: none;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -909,6 +914,7 @@ p.message-para {
   outline: none;
   margin: 0 auto;
   -webkit-appearance: none;
+  appearance: none;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
