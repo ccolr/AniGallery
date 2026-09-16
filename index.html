@@ -40,8 +40,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 // pager: true, // 显示分页
             });
 
+            var $navigationButtons = $(".callbacks_nav");
+
+            // 轮播库默认生成 href="#" 的链接，移除它以避免悬停时显示页面地址。
+            $navigationButtons
+                .removeAttr("href")
+                .attr({
+                    "role": "button",
+                    "tabindex": "0",
+                    "aria-controls": "slider1"
+                })
+                .on("keydown", function (event) {
+                    if (event.which === 13 || event.which === 32) {
+                        event.preventDefault();
+                        $(this).trigger("click");
+                    }
+                });
+
             // 统一触屏浏览器的导航按钮反馈时长
-            $(".callbacks_nav").each(function () {
+            $navigationButtons.each(function () {
                 var button = this;
                 var releaseTimer;
                 var $button = $(button);
