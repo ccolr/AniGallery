@@ -343,8 +343,11 @@ ul.callbacks_tabs.callbacks1_tabs {
   touch-action: manipulation;
   transition: opacity 0.2s ease;
 }
+.callbacks_nav:active,
 .callbacks_nav:focus-visible {
   opacity: 1;
+}
+.callbacks_nav:focus-visible {
   outline: 3px solid #7e983f;
   outline-offset: 3px;
 }
