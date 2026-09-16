@@ -39,6 +39,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 namespace: "callbacks", // 命名空间
                 // pager: true, // 显示分页
             });
+
+            // 统一触屏浏览器的导航按钮反馈时长
+            $(".callbacks_nav").each(function () {
+                var button = this;
+                var releaseTimer;
+                var $button = $(button);
+
+                function showPressed() {
+                    window.clearTimeout(releaseTimer);
+                    $button.addClass("is-pressed");
+                }
+
+                function releasePressed() {
+                    window.clearTimeout(releaseTimer);
+                    releaseTimer = window.setTimeout(function () {
+                        $button.removeClass("is-pressed");
+                    }, 250);
+                }
+
+                if (window.PointerEvent) {
+                    $button.on("pointerdown", showPressed);
+                    $button.on("pointerup pointercancel pointerleave", releasePressed);
+                } else {
+                    $button.on("touchstart mousedown", showPressed);
+                    $button.on("touchend touchcancel mouseup mouseleave", releasePressed);
+                }
+            });
         });
     </script>
 </head>
