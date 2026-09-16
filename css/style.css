@@ -331,9 +331,13 @@ ul.callbacks_tabs.callbacks1_tabs {
   text-indent: -9999px;
   overflow: hidden;
   text-decoration: none;
-  height: 104px;
   width: 44px;
-  background: transparent url("../images/img-sprite.webp") no-repeat -360px 0px;
+  height: clamp(66px, 8.9vw, 104px);
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 104'%3E%3Cpath d='M42 2 2 52l40 50' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: clamp(28px, 3.8vw, 44px) 100%;
   cursor: pointer;
   touch-action: manipulation;
   transition: opacity 0.2s ease;
@@ -348,8 +352,8 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .callbacks_nav.next {
   left: auto;
-  background-position: -405px 0px;
   right: 3%;
+  transform: translateY(-50%) scaleX(-1);
 }
 .banner-top {
   padding: 0em 0 4em;
@@ -1105,17 +1109,6 @@ p.footer-class a:hover {
   #portfoliolist .portfolio:nth-child(6),
   #portfoliolist .portfolio:nth-child(8) {
     margin: 0 0 1em;
-  }
-  .callbacks_nav {
-    left: 8px;
-    width: 44px;
-    height: 82px;
-    background-position: -279px 0px;
-    background-size: 400px auto;
-  }
-  .callbacks_nav.next {
-    right: 8px;
-    background-position: -307px 0px;
   }
   ul.callbacks_tabs.callbacks1_tabs {
     bottom: -39px;
