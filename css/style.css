@@ -326,7 +326,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   top: 50%;
   left: 3%;
   transform: translateY(-50%);
-  opacity: 0.85;
+  opacity: 0.5;
   z-index: 3;
   text-indent: -9999px;
   overflow: hidden;
