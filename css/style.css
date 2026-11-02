@@ -1362,3 +1362,10 @@ p.footer-class a:hover {
     padding: 0 2em 0 0;
   }
 }
+
+img,
+video {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
